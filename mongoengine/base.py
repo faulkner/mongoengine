@@ -1014,11 +1014,11 @@ class BaseDict(dict):
 
     def pop(self, *args, **kwargs):
         self._mark_as_changed()
-        super(BaseDict, self).clear(*args, **kwargs)
+        super(BaseDict, self).pop(*args, **kwargs)
 
     def popitem(self, *args, **kwargs):
         self._mark_as_changed()
-        super(BaseDict, self).clear(*args, **kwargs)
+        super(BaseDict, self).popitem(*args, **kwargs)
 
     def _mark_as_changed(self):
         """Marks a dict as changed if has an instance and a name"""
